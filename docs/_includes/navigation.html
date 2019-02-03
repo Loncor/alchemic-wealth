@@ -1,0 +1,62 @@
+<div class="local-navbar">
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">{{layout.project_name}}</a>
+		</div>
+		<div>
+			{% assign submenu = 'None' %}
+			<ul class="nav navbar-nav">
+				<li class="local-nav-item"><a href="/index.html">Home</a></li>
+
+			{% for node in site.html_pages %}
+				{% assign node_url_parts = node.url | split: '/' %}
+				{% assign node_url_parts_size = node_url_parts | size %}
+				{% assign filename = node_url_parts | last %}
+				{% case node_url_parts_size %}
+					{% when 2 %}
+						{% if submenu != 'None' %}
+									</ul>
+								</li>
+							{% assign submenu = 'None' %}
+						{% endif %}
+						<li><a href='{{node.url}}'>{{node.title}}</a></li>
+					{% when 3 %}
+						{% assign penultimate_url_part = '/' %}
+						{% assign previous_url_part = '/' %}
+						{% for url_part in node_url_parts %}
+							{% assign penultimate_url_part = previous_url_part %}
+							{% assign previous_url_part = url_part %}
+						{% endfor %}
+						{% if submenu != penultimate_url_part %}
+							{% if submenu != 'None' %}
+									</ul>
+								</li>
+							{% endif %}
+							{% assign submenu = penultimate_url_part  %}
+							{% assign display_submenu = submenu | replace: '%20', ' '  %}
+								<li class="dropdown">
+									<a href="{{submenu}}" class="dropdown-toggle" data-toggle="dropdown">{{display_submenu}}<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+						{% endif %}
+						            	<li><a href='{{node.url}}'>{{node.title}}</a></li>
+				{% else %}
+					{% if submenu != 'None' %}
+							</ul>
+						</li>
+						{% assign submenu = 'None' %}
+					{% endif %}
+				{% endcase %}
+			{% endfor %}
+			<li class="dropdown">
+				<a href="{{submenu}}" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+				{% for node in site.posts %}
+					<li><a href='{{node.url}}'>{{node.title}}</a></li>
+				{% endfor %}					
+				</ul>
+			</li>
+		</div>
+	</div>
+	</nav>
+</div>

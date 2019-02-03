@@ -1,0 +1,223 @@
+/*
+ * Globals
+ */
+
+body {
+  font-family: sans-serif, Georgia, Times;
+  font-size: 16px;
+  color: #555;
+}
+
+pre {
+  font-size: 16px;
+}
+
+li {
+  /* font-size: 16px; */
+}
+
+/*
+ * Masthead for nav
+ */
+
+/* Unselected colors on Navigation Bar */
+.local-navbar *,
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav>li>a,
+.navbar-inverse .navbar-nav>.active>a,
+.dropdown-menu>li>a {
+  color: #ddd;
+  background-color: #428bca;
+}
+
+.dropdown-menu>li>a:hover,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:hover,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus {
+  color: #fff;
+  background-color: #428bca;
+}
+
+/* Active state gets a caret at the bottom */
+.navbar .active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  color: #fff;
+  background-color: #428bca;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
+}
+
+
+/*******************************************/
+
+
+
+/*
+ * local name and description
+ */
+
+.local-header {
+    font-weight: 300;
+    display: block;
+    color: #333;
+    text-align: center;
+}
+.local-header h1 {
+    font-size:2em;
+    margin: 0.2em 0;
+    font-weight: 300;
+}
+.local-header h2 {
+    font-size: 1.5em;
+    margin: .83em 0;
+    font-weight: 300;
+    color:DarkSlateBlue;
+}
+
+.local-title {
+  margin-top: 2em;
+  margin-bottom: 0;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+.local-description {
+  font-size: 1.5em;
+  color: #999;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Main Text
+ */
+
+.local-main {
+  font-size: 1em;
+  line-height: 1.5;
+}
+.local-main h1 {
+    font-size:2em;
+    margin: 0.2em 0;
+    font-weight: 300;
+}
+.local-main h2 {
+    font-size: 1.5em;
+    margin: .83em 0;
+    font-weight: 300;
+    color:DarkSlateBlue;
+}
+.local-main h3 {
+    font-size: 1.3em;
+    margin: .83em 0;
+    font-weight: 300;
+    color:RebeccaPurple;
+}
+
+.local-main p {
+    font-size: 1em;
+    margin: .83em 0;
+    font-weight: 300;
+    color:MidnightBlue;
+}
+
+/*
+ * Footer
+ */
+
+.local-footer {
+  padding: 4px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.local-footer p:last-child {
+  margin-bottom: 0;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table, td, th {
+    border: 1px solid DarkSlateBlue;
+    padding: 4px;
+}
+th {
+    background-color: RebeccaPurple;
+    color: white;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+/* PL/SQL Code */
+.code_seq {
+    display: block;
+    width: 80%;
+    unicode-bidi: embed;
+    font-family: monospace "Lucida Console" "Courier New" monospace;
+    white-space: pre;
+    border: 1px solid;
+    font-size: 1em;
+    line-height: 1.4;
+    color: black;
+    background-color: FloralWhite;
+    padding: 1em;
+}
+pre .plsql_comment {
+   color: green;
+}
+pre .plsql_resword {
+   color: blue;
+}
+pre .plsql_userword {
+   color: maroon;
+}
+pre .plsql_brackets {
+   color: red;
+}
+pre .plsql_quotes {
+   color: teal;
+}
+
+
+    /*
+.plsql_replace {
+    font-family: monospace;
+    color: red;
+    font-size: 2em;
+    background:url(images/database_add.png) no-repeat 100% 50%;
+    border:2px dotted #00f;
+}
+    */
+
+.plsql_replace::before {
+    content: url(images/database_add.png);
+}

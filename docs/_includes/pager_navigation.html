@@ -1,0 +1,23 @@
+{% assign html_pages_twice = site.html_pages | concat: site.html_pages  %}
+{% assign position = 0 %}
+{% assign middle = site.html_pages | size %}
+
+{% for node in html_pages_twice %}
+  {% assign position = position | plus: 1 %}
+
+	{% assign previous_url = current_url %}
+	{% assign current_url = next_url %}
+	{% assign next_url = node.url %}
+
+	{% if position > middle and current_url == page.url %}
+    	{% break %}
+  	{% endif %}
+{% endfor %}
+
+<nav>
+	<ul class="pager">
+		<li><a href="{{previous_url}}">Previous</a></li>
+		<li><a href="{{current_url}}">Top</a></li>
+		<li><a href="{{next_url}}">Next</a></li>
+	</ul>
+</nav>

@@ -1,0 +1,65 @@
+---
+project_name: Alchemic Wealth
+anote: '&#9888;'
+globe: '&#127760;'
+tele: '&#9743;'
+mailsn: '&#9993;'
+mailto: '&#128231;'
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contains part of the development standards for developing Oracle applications using the Oracle Relational database and PL/SQL lanuage">
+    <meta name="keywords" content="Oracle, PL/SQL, PLSQL, SQL, Loncor">
+    <meta name="author" content="Stan Wilson, Loncor Ptd Ltd">
+    <title>{{layout.project_name}}</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<!-- Local CSS -->
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/local.css" rel="stylesheet">
+    <!-- <link href="/assets/css/syntax.css" rel="stylesheet"> -->
+</head>
+
+
+<body>
+	{% include navigation.html %}
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-1 col-md-1 local-sidebar">
+          <div class="sidebar-module">
+          </div>
+        </div><!-- /.local-sidebar -->
+
+        <div class="col-xs-10 col-md-10 local-main">
+          <div class="local-header">
+              <h1>{{ page.title }}</h1>
+          </div>
+          <div class="local-main">
+              {{ content }}
+          </div><!-- /.local-main -->
+<!-- -->
+	{% include pager_navigation.html %}
+<!-- -->
+        </div><!-- /.local-header -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <footer class="local-footer">
+        Content of this website © Copyright 2018 Stanley Wilson for Loncor (Australia). All rights reserved.
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
