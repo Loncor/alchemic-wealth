@@ -1,4 +1,5 @@
 name: Loncor.biz
+baseurl: /~loncor
 
 # Conversion
 markdown: kramdown

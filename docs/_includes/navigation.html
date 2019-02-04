@@ -2,12 +2,12 @@
 	<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">{{layout.project_name}}</a>
+			<a class="navbar-brand" href="{{site.baseurl}}/index.html">{{layout.project_name}}</a>
 		</div>
 		<div>
 			{% assign submenu = 'None' %}
 			<ul class="nav navbar-nav">
-				<li class="local-nav-item"><a href="/index.html">Home</a></li>
+				<li class="local-nav-item"><a href="{{site.baseurl}}/index.html">Home</a></li>
 
 			{% for node in site.html_pages %}
 				{% assign node_url_parts = node.url | split: '/' %}
@@ -20,7 +20,7 @@
 								</li>
 							{% assign submenu = 'None' %}
 						{% endif %}
-						<li><a href='{{node.url}}'>{{node.title}}</a></li>
+						<li><a href='{{site.baseurl}}/{{node.url}}'>{{node.title}}</a></li>
 					{% when 3 %}
 						{% assign penultimate_url_part = '/' %}
 						{% assign previous_url_part = '/' %}
@@ -36,10 +36,10 @@
 							{% assign submenu = penultimate_url_part  %}
 							{% assign display_submenu = submenu | replace: '%20', ' '  %}
 								<li class="dropdown">
-									<a href="{{submenu}}" class="dropdown-toggle" data-toggle="dropdown">{{display_submenu}}<b class="caret"></b></a>
+									<a href="{{site.baseurl}}/{{submenu}}" class="dropdown-toggle" data-toggle="dropdown">{{display_submenu}}<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 						{% endif %}
-						            	<li><a href='{{node.url}}'>{{node.title}}</a></li>
+						            	<li><a href='{{site.baseurl}}/{{node.url}}'>{{node.title}}</a></li>
 				{% else %}
 					{% if submenu != 'None' %}
 							</ul>
@@ -49,11 +49,11 @@
 				{% endcase %}
 			{% endfor %}
 			<li class="dropdown">
-				<a href="{{submenu}}" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
+				<a href="{{site.baseurl}}/{{submenu}}" class="dropdown-toggle" data-toggle="dropdown">Posts<b class="caret"></b></a>
 				<ul class="dropdown-menu">
 				{% for node in site.posts %}
-					<li><a href='{{node.url}}'>{{node.title}}</a></li>
-				{% endfor %}					
+					<li><a href='{{site.baseurl}}/{{node.url}}'>{{node.title}}</a></li>
+				{% endfor %}
 				</ul>
 			</li>
 		</div>
