@@ -4,7 +4,7 @@ layout: default
 ---
 # Prefix Naming Convention
 
-The [Naming Conventions](https://en.wikipedia.org/wiki/Naming_convention_(programming)) described here are based on the following aspects of an **Identifier** which are summarized in an identifier prefix.
+The [Naming Conventions](https://en.wikipedia.org/wiki/Naming_convention_(programming)) described here are based on the following aspects of an **Identifier**: *Scope*, *Data Type* and *Identifier Type* which are summarized in an identifier prefix.
 
 ## Scope
 
@@ -39,7 +39,7 @@ Data Type Category|Description
 
 ## Identifier Types
 
-In PL/SQL there are several types of identifiers. The following are the only ones that have will have a specific prefixes added to them.:-
+In PL/SQL there are several types of identifiers. Only the following ones have a specific prefixes added to them.:-
 
 Identifier Type     | Description
 ------------------- | ------------------------------------------------------------------
