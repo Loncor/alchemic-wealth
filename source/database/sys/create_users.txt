@@ -1,0 +1,24 @@
+SQL> /************************************************************************
+SQL> * Project	    : Alchemic Wealth
+SQL> * Description  : Create all table and package schemas.
+SQL> * Author(s)    : Stanley Wilson
+SQL> * Copyright    : 2015, Stanley Wilson
+SQL> * License	    : MIT (https://opensource.org/licenses/MIT)
+SQL> */
+SQL> 
+SQL> set verify off
+SQL> set feedback on
+SQL> set escape on
+SQL> 
+SQL> --------------------------------------------
+SQL> 
+SQL> @../check_user.sql SYS
+SQL> set echo off
+"+++ Check for correct schema SYS"
+begin
+*
+ERROR at line 1:
+ORA-20987: !!! User PROCSCHEMA cannot run this script. User SYS was expected.
+ORA-06512: at line 3
+
+
