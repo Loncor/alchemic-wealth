@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: Contact Loncor
 layout: default
 ---
 ## {{layout.mailto}} Email
@@ -8,7 +8,7 @@ layout: default
 ## {{layout.tele}} Telephone
 Office: (02) 8094 8756 (within Australia)
 
-International: +61 2 8094 8756 (outside Australia)
+International: +61 2 8094 8756 (outside Australia)  
 
 Mobile (+61) 0402 778 034
 

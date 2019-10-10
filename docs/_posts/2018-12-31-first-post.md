@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Stan
+author: Stan Wilson
 ---
 Here we go, my first **real** blog. The purpose of it is to introduce my "Soft-wares" to anyone who is interested.
 

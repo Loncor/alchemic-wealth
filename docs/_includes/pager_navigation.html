@@ -1,4 +1,6 @@
-{% assign html_pages_twice = site.html_pages | concat: site.html_pages  %}
+{% assign posts_sorted = site.posts | sort %}
+{% assign html_pages_once = site.html_pages | concat: posts_sorted %}
+{% assign html_pages_twice = html_pages_once | concat: html_pages_once  %}
 {% assign position = 0 %}
 {% assign middle = site.html_pages | size %}
 
